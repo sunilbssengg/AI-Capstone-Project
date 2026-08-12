@@ -13,6 +13,8 @@ langchain-community==0.2.16
 langchain-google-genai==1.0.10
 langchain-chroma==0.1.4
 langchain-text-splitters==0.2.4
+langchain-groq==0.1.9
+langchain-together==0.1.5
 
 # --- Vector store ---
 chromadb==0.5.5
@@ -25,9 +27,10 @@ pypdf==4.3.1
 python-docx==1.1.2
 openpyxl==3.1.5
 pandas==2.2.2
-unstructured==0.15.9
 
-# --- API layer (optional REST interface) ---
+# --- API layer (optional REST interface — NOT required for the Streamlit
+# app itself; only needed if you also run `uvicorn api.main:app` somewhere.
+# Safe to delete these 3 lines if you're deploying only to Streamlit Cloud.) ---
 fastapi==0.112.2
 uvicorn==0.30.6
 python-multipart==0.0.9
